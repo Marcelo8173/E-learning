@@ -18,7 +18,7 @@ export const ContentContainer = styled.div`
         h1{
             font-family: 'Rubik', sans-serif;
             font-weight: 400;
-            font-size: 36px;
+            font-size: 46px;
             line-height: 42,66px;
             color: #FF6680;
             margin-bottom: 16px;
@@ -28,7 +28,7 @@ export const ContentContainer = styled.div`
             font-weight: 400;
             color: #EDEBF5;
             font-size: 15px;
-            line-height: 25px;
+            line-height: 35px;
             margin-bottom: 40px;
         }
     }
@@ -43,7 +43,13 @@ export const ContentContainer = styled.div`
         font-family: 'Roboto';
         font-weight: 500;
         font-size: 15px;
-        line-height: 17,58px;
+        line-height: 27,58px;
         color: #FFFFFF;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        svg{
+            margin-left: 15px;
+        }
     }
 `;
