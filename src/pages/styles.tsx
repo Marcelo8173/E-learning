@@ -3,13 +3,10 @@ import {shade} from 'polished';
 import elearning from '../assets/e.learning.png';
 
 export const Container = styled.div`
-    background-image: url(${elearning});
+    /* background-image: url(${elearning});
     background-repeat: no-repeat;
     background-size: 35%;
-    border: 1px solid transparent;
-    @media (max-width: 750px){
-        background: none;
-    }
+    border: 1px solid transparent; */
 `;
 
 export const Content = styled.div`
@@ -17,6 +14,12 @@ export const Content = styled.div`
     margin: 110px 110px 0 110px;
         div{
             flex: 1;
+            img{
+                width: 50%;
+                @media (max-width: 750px){
+                    width: 100%;
+                }
+            }
         }
     @media (max-width: 750px){
         display: flex;
