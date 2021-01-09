@@ -1,4 +1,5 @@
 import {createGlobalStyle} from 'styled-components';
+import elearning from '../assets/e.learning.png';
 
 export default createGlobalStyle`
     *{
