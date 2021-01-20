@@ -1,10 +1,11 @@
 import React from'react';
+import Header from '../../components/header';
 import {Container} from './style';
 
 const Dashboard: React.FC = () => {
     return(
         <Container>
-            <header></header>
+            <Header/>
         </Container>
     )
 }

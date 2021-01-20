@@ -1,5 +1,5 @@
 import React from 'react';
-import Logo from '../../assets/e.learninglogo.png';
+import Logo from '../../assets/Logotipologo.png';
 import LogOut from '../../assets/SairbuttonLogOut.png';
 import {Container} from './styled';
 
