@@ -1,5 +1,5 @@
 import React from 'react';
-import ImageInitial from '../assets/Vector.svg';
+import ImageInitial from '../../assets/Vector.svg';
 import {FiArrowRight} from 'react-icons/fi';
 import {Container,Content,ContentContainer} from './styles';
 

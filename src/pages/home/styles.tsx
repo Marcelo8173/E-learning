@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import {shade} from 'polished';
-import elearning from '../assets/e.learning.png';
+import elearning from '../../assets/e.learning.png';
 
 export const Container = styled.div`
     /* background-image: url(${elearning});
