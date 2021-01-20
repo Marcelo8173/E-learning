@@ -3,7 +3,9 @@ import {Container} from './style';
 
 const Dashboard: React.FC = () => {
     return(
-        <Container>Olá</Container>
+        <Container>
+            <header></header>
+        </Container>
     )
 }
 
