@@ -7,10 +7,14 @@ const Header: React.FC = () => {
     return(
         <Container>
             <header>
-                <img src={Logo} alt=""/>
-                <button>
-                    <img src={LogOut} alt=""/>
-                </button>
+                <div>
+                    <img src={Logo} alt=""/>
+                </div>
+                <div>
+                    <button>
+                        <img src={LogOut} alt=""/>
+                    </button>
+                </div>
             </header>
         </Container>
     )
