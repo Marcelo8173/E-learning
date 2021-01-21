@@ -14,7 +14,7 @@ export const Container = styled.div`
 `;
 
 export const Button = styled.button<IProps>`
-    
+    background: #FFFFFF;
     font-family: 'Roboto',sans-serif;
     font-weight: 500;
     font-size: 20px;

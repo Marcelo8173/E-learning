@@ -8,6 +8,7 @@ const Dashboard: React.FC = () => {
         <Container>
             <Header/>
             <NavBar />
+            <input type="text"/>
         </Container>
     )
 }
