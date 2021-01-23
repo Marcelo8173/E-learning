@@ -2,8 +2,8 @@ import React from'react';
 import Header from '../../components/header';
 import NavBar from '../../components/navbar';
 import {AiOutlineSearch} from 'react-icons/ai';
-import {Container,InputContainer} from './style';
 import Background from '../../components/Background';
+import {Container,InputContainer,TitleContainer,CardContainer} from './style';
 
 const Dashboard: React.FC = () => {
     return(
@@ -20,7 +20,13 @@ const Dashboard: React.FC = () => {
             </div>
             <main>
                 <Background>
-                    olá mundo
+                    <TitleContainer>
+                        <h2>Categorias</h2>
+                        <span>43 cursos</span>
+                    </TitleContainer>
+                    <CardContainer>
+                        
+                    </CardContainer>
                 </Background>
             </main>
         </Container>

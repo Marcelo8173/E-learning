@@ -33,3 +33,21 @@ export const InputContainer = styled.div`
         }
     }
 `;
+
+export const TitleContainer = styled.div`
+    display: flex;
+    justify-content: space-between;
+    justify-items: center;
+    margin: 0px 24px;
+
+    h2{
+        color: #3D3D4C;
+        font-size: 25px;
+    }
+    span{
+        color: #A0A0B2;
+        font-size: 17px;
+    }
+`;
+
+export const CardContainer = styled.section``;
