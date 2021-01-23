@@ -3,6 +3,7 @@ import Header from '../../components/header';
 import NavBar from '../../components/navbar';
 import {AiOutlineSearch} from 'react-icons/ai';
 import {Container,InputContainer} from './style';
+import Background from '../../components/Background';
 
 const Dashboard: React.FC = () => {
     return(
@@ -17,6 +18,11 @@ const Dashboard: React.FC = () => {
                     </div>
                 </InputContainer>
             </div>
+            <main>
+                <Background>
+                    olá mundo
+                </Background>
+            </main>
         </Container>
     )
 }
