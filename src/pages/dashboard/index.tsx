@@ -12,7 +12,7 @@ const Dashboard: React.FC = () => {
                 <NavBar />
                 <InputContainer>
                     <div>
-                        <AiOutlineSearch />
+                        <AiOutlineSearch color="#C4C4D1" size={20}/>
                         <input placeholder="Busque um curso" type="text"/>    
                     </div>
                 </InputContainer>

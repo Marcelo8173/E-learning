@@ -20,9 +20,16 @@ export const InputContainer = styled.div`
         display: flex;
         align-items: center;
         justify-content: center;
+        width: 100%;
+        height: 100%;
         input{
-            /* border: 1px solid transparent; */
-            /* max-width: 100%; */
+            width: 75%;
+            height: 90%;
+            margin-left: 10px;
+            border: 1px solid transparent;
+            &::placeholder{
+                color:#C4C4D1;
+            }
         }
     }
 `;
