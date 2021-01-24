@@ -31,6 +31,7 @@ export const InputContainer = styled.div`
             height: 90%;
             margin-left: 10px;
             border: 1px solid transparent;
+            color:#C4C4D1;
             &::placeholder{
                 color:#C4C4D1;
             }
