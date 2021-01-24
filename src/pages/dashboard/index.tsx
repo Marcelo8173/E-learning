@@ -3,7 +3,8 @@ import Header from '../../components/header';
 import NavBar from '../../components/navbar';
 import {AiOutlineSearch} from 'react-icons/ai';
 import Background from '../../components/Background';
-import {Container,InputContainer,TitleContainer,CardContainer} from './style';
+import {Container,InputContainer,TitleContainer} from './style';
+import Cards from '../../components/Cards';
 
 const Dashboard: React.FC = () => {
     return(
@@ -24,9 +25,17 @@ const Dashboard: React.FC = () => {
                         <h2>Categorias</h2>
                         <span>43 cursos</span>
                     </TitleContainer>
-                    <CardContainer>
+                    <div className="grid">
+                        <Cards />
+                        <Cards />
+                        <Cards />
+                        <Cards />
+                        <Cards />
+                        <Cards />
+                        <Cards />
+            
                         
-                    </CardContainer>
+                    </div>
                 </Background>
             </main>
         </Container>

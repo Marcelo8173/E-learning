@@ -5,6 +5,10 @@ export const Container = styled.div`
         display: flex;
         justify-items: center;
     }
+    .grid{
+        display: grid;
+        grid-template-columns: auto auto auto auto auto;
+    }
 `;
 
 export const InputContainer = styled.div`
@@ -49,5 +53,3 @@ export const TitleContainer = styled.div`
         font-size: 17px;
     }
 `;
-
-export const CardContainer = styled.section``;
