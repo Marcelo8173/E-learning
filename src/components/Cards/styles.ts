@@ -12,5 +12,18 @@ export const Container = styled.section`
         img{
             margin-bottom: 24px;
         }
+        p{
+            font-family: 'Roboto';
+            color: #6C6C80;
+            margin-bottom: 4px;
+        }
+        span{
+            font-family: 'Roboto';
+            color: #C4C4D1;
+        }
+        button{
+            background: transparent;
+            border: 1px solid transparent;
+        }
     }
 `;

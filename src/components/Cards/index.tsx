@@ -11,7 +11,11 @@ const Cards: React.FC = () => {
                 <p>Matemática</p>
                 <span>16 aulas</span>
             </div>
-            <FiTrash />
+            <div>
+                <button>
+                    <FiTrash size={24}  color="#C4C4D1"/>
+                </button>
+            </div>
         </Container>
     );
 }
