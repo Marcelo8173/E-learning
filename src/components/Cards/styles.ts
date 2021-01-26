@@ -11,6 +11,8 @@ export const Container = styled.section`
     div{
         img{
             margin-bottom: 24px;
+            width: 80%;
+            height: auto
         }
         p{
             font-family: 'Roboto';
