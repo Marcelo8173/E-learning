@@ -1,12 +1,29 @@
-import React from'react';
+import React, { useEffect, useState, Fragment } from'react';
 import Header from '../../components/header';
 import NavBar from '../../components/navbar';
 import {AiOutlineSearch} from 'react-icons/ai';
 import Background from '../../components/Background';
 import {Container,InputContainer,TitleContainer} from './style';
 import Cards from '../../components/Cards';
+import api from '../../services/api';
+
+export interface ICousrses{
+    id?: string;
+    name: string;
+    image: string;
+}
 
 const Dashboard: React.FC = () => {
+
+    const [courses,setCourses] = useState<ICousrses[]>([]);
+
+    useEffect(() => {
+        api.get(`/courses`).then(response => {
+            setCourses(response.data);
+        })
+    },[]);
+
+
     return(
         <Container>
             <Header/>
@@ -26,15 +43,13 @@ const Dashboard: React.FC = () => {
                         <span>43 cursos</span>
                     </TitleContainer>
                     <div className="grid">
-                        <Cards />
-                        <Cards />
-                        <Cards />
-                        <Cards />
-                        <Cards />
-                        <Cards />
-                        <Cards />
-            
-                        
+                        {courses.map(item => (
+                            <Fragment key={item.id}>
+                                <Cards
+                                    name={item.name}
+                                    image={item.image} />
+                            </Fragment>
+                        ))} 
                     </div>
                 </Background>
             </main>

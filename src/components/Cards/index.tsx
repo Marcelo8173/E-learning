@@ -1,14 +1,14 @@
 import React from 'react';
 import {FiTrash} from 'react-icons/fi';
-import Math from '../../assets/Math.png'
 import {Container} from './styles';
+import { ICousrses } from '../../pages/dashboard';
 
-const Cards: React.FC = () => {
+const Cards: React.FC<ICousrses> = ({name,image}) => {
     return(
         <Container>
             <div>
-                <img src={Math} alt=""/>
-                <p>Matemática</p>
+                <img src={image} alt=""/>
+                    <p>{name}</p>
                 <span>16 aulas</span>
             </div>
             <div>
