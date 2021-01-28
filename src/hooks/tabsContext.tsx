@@ -1,6 +1,6 @@
 import React, { useContext, createContext, useCallback, useState } from 'react';
 
-interface TabsData{
+export interface TabsData{
     id: number;
     name: string;
 }

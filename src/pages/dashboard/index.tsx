@@ -3,7 +3,7 @@ import Header from '../../components/header';
 import NavBar from '../../components/navbar';
 import {AiOutlineSearch} from 'react-icons/ai';
 import Background from '../../components/Background';
-import {Container,InputContainer,TitleContainer} from './style';
+import { Container, InputContainer, TitleContainer } from './style';
 import Cards from '../../components/Cards';
 import api from '../../services/api';
 import { useTabs } from '../../hooks/tabsContext';

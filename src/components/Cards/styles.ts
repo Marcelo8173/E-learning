@@ -11,7 +11,7 @@ export const Container = styled.section`
     div{
         img{
             margin-bottom: 24px;
-            width: 80%;
+            max-width: 80%;
             height: auto
         }
         p{
@@ -22,10 +22,6 @@ export const Container = styled.section`
         span{
             font-family: 'Roboto';
             color: #C4C4D1;
-        }
-        button{
-            background: transparent;
-            border: 1px solid transparent;
         }
     }
 `;
