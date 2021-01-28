@@ -5,13 +5,13 @@ export interface TabsData{
     name: string;
 }
 
-interface TabsContext{
+interface TabsContextData{
     addSelectTab(item: TabsData): void;
     tabSelected: TabsData;
 }
 
 
-const TabsContext = createContext<TabsContext>({} as TabsContext);
+const TabsContext = createContext<TabsContextData>({} as TabsContextData);
 
 export const Tabs: React.FC = ({children}) => {
     
@@ -31,7 +31,7 @@ export const Tabs: React.FC = ({children}) => {
     )
 }
 
-export function useTabs(): TabsContext{
+export function useTabs(): TabsContextData{
     const context = useContext(TabsContext);
     if(!context){
         throw new Error('useAuth must be used within an AuthProvider');
