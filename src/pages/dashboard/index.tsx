@@ -6,6 +6,7 @@ import Background from '../../components/Background';
 import {Container,InputContainer,TitleContainer} from './style';
 import Cards from '../../components/Cards';
 import api from '../../services/api';
+import { useTabs } from '../../hooks/tabsContext';
 
 export interface ICousrses{
     id?: string;
@@ -14,19 +15,20 @@ export interface ICousrses{
 }
 
 const Dashboard: React.FC = () => {
-
-
+    const { tabSelected } = useTabs();
     const [courses,setCourses] = useState<ICousrses[]>([]);
 
     useEffect(() => {
+        tabSelected.id === 1 &&
         api.get(`/courses`).then(response => {
             setCourses(response.data);
         })
-    },[]);
+    },[tabSelected]);
 
 
     return(
         <Container>
+            {console.log(tabSelected)}
             <Header/>
             <div className="Nav">
                 <NavBar />

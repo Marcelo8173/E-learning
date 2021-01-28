@@ -6,7 +6,7 @@ import { useTabs } from '../../hooks/tabsContext';
 
 const NavBar: React.FC = () => {
 
-    const {addSelectTab } = useTabs();
+    const {addSelectTab} = useTabs();
     const [selected, setSelected] = useState(1);
     
     const handleSelectTab = useCallback((id:number) => {

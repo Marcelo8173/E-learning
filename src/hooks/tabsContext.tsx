@@ -1,4 +1,4 @@
-import React, { useContext, createContext, useCallback, useState, useEffect } from 'react';
+import React, { useContext, createContext, useCallback, useState } from 'react';
 
 interface TabsData{
     id: number;
@@ -21,7 +21,7 @@ export const Tabs: React.FC = ({children}) => {
     });
 
     const addSelectTab = useCallback((item:TabsData) => {
-        console.log(item)
+        setTabSelected(item)
     }, []);
 
     return (
