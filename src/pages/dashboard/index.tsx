@@ -45,18 +45,22 @@ const Dashboard: React.FC = () => {
                         <h2>Categorias</h2>
                         <span>43 cursos</span>
                     </TitleContainer>
-                    <div className="grid">
-                        {courses.map(item => (
-                            <Fragment key={item.id}>
-                                <Link to={`/courses/${item.id}`}>
-                                    <Cards
-                                        name={item.name}
-                                        image={item.image}
-                                    />
-                                </Link>
-                            </Fragment>
-                        ))} 
-                    </div>
+                    {tabSelected.id === 1 ?
+                        <div className="grid">
+                            {courses.map(item => (
+                                <Fragment key={item.id}>
+                                    <Link to={`/courses/${item.id}`}>
+                                        <Cards
+                                            name={item.name}
+                                            image={item.image}
+                                        />
+                                    </Link>
+                                </Fragment>
+                            ))} 
+                        </div>
+                        :
+                        <div>Olá</div>
+                    }
                 </Background>
             </main>
         </Container>
