@@ -1,11 +1,14 @@
 import React from 'react';
+import { Following } from './followContext';
 import {Tabs} from './tabsContext';
 
 const AppProvider: React.FC = ({children}) =>{
-    return(
-        <Tabs>
-            {children}
-        </Tabs>
+    return (
+        <Following>
+            <Tabs>
+                {children}
+            </Tabs>
+        </Following>
     );
 };
 

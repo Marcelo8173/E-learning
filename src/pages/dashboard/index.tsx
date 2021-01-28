@@ -59,7 +59,9 @@ const Dashboard: React.FC = () => {
                             ))} 
                         </div>
                         :
-                        <div>Olá</div>
+                        <div className="grid">
+                            Olá
+                        </div>
                     }
                 </Background>
             </main>
