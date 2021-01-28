@@ -7,6 +7,7 @@ import {Container,InputContainer,TitleContainer} from './style';
 import Cards from '../../components/Cards';
 import api from '../../services/api';
 import { useTabs } from '../../hooks/tabsContext';
+import { Link } from 'react-router-dom';
 
 export interface ICousrses{
     id?: string;
@@ -28,7 +29,6 @@ const Dashboard: React.FC = () => {
 
     return(
         <Container>
-            {console.log(tabSelected)}
             <Header/>
             <div className="Nav">
                 <NavBar />
@@ -48,9 +48,12 @@ const Dashboard: React.FC = () => {
                     <div className="grid">
                         {courses.map(item => (
                             <Fragment key={item.id}>
-                                <Cards
-                                    name={item.name}
-                                    image={item.image} />
+                                <Link to={`/courses/${item.id}`}>
+                                    <Cards
+                                        name={item.name}
+                                        image={item.image}
+                                    />
+                                </Link>
                             </Fragment>
                         ))} 
                     </div>
