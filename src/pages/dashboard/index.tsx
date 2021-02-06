@@ -48,7 +48,7 @@ const Dashboard: React.FC = () => {
                 <Background>
                     <TitleContainer>
                         <h2>Categorias</h2>
-                        <span>43 cursos</span>
+                        <span>{courses?.countCourses} cursos</span>
                     </TitleContainer>
                     {tabSelected.id === 1 ?
                         <div className="grid">
