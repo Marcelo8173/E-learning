@@ -1,5 +1,5 @@
 import React, { useContext, createContext, useCallback, useState, useEffect } from 'react';
-import { ICousrses } from '../pages/dashboard';
+import { ICouseData as ICousrses } from '../pages/dashboard';
 
 interface FollowContextData{
     addToFollow(item:ICousrses): void;

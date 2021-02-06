@@ -2,7 +2,12 @@ import React from 'react';
 import {Container} from './styles';
 import { ICousrses } from '../../pages/dashboard';
 
-const Cards: React.FC<ICousrses> = ({name,image}) => {
+interface ICards{
+    name: string,
+    image: string
+}
+
+const Cards: React.FC<ICards> = ({name,image}) => {
     return(
         <Container>  
             <div>

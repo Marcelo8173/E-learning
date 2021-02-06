@@ -38,10 +38,10 @@ const Courses: React.FC = () => {
             <Header />
             <main>
                 <Background>
-                    <TitleContainer>
+                    {/* <TitleContainer>
                         <h2>{course?.name}</h2>
                         <span>43 cursos</span>
-                    </TitleContainer>
+                    </TitleContainer> */}
                     <div className="grid">
                         {lesson.map(item => (
                             <div>

@@ -9,19 +9,24 @@ import api from '../../services/api';
 import { useTabs } from '../../hooks/tabsContext';
 import { Link } from 'react-router-dom';
 
-export interface ICousrses{
+export interface ICouseData{
     id?: string;
     name: string;
-    image: string;
+    image: string;    
+}
+
+export interface ICousrses{
+    coursesData: ICouseData[];
+    countCourses: string;
 }
 
 const Dashboard: React.FC = () => {
     const { tabSelected } = useTabs();
-    const [courses,setCourses] = useState<ICousrses[]>([]);
+    const [courses,setCourses] = useState<ICousrses>();
 
     useEffect(() => {
         tabSelected.id === 1 &&
-        api.get(`/courses`).then(response => {
+            api.get(`/courses`).then(response => {
             setCourses(response.data);
         })
     },[tabSelected]);
@@ -47,7 +52,7 @@ const Dashboard: React.FC = () => {
                     </TitleContainer>
                     {tabSelected.id === 1 ?
                         <div className="grid">
-                            {courses.map(item => (
+                            {courses?.coursesData.map(item => (
                                 <Fragment key={item.id}>
                                     <Link to={`/courses/${item.id}`}>
                                         <Cards
