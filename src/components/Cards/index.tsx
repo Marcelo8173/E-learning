@@ -1,6 +1,5 @@
 import React from 'react';
 import {Container} from './styles';
-import { ICousrses } from '../../pages/dashboard';
 
 interface ICards{
     name: string,
