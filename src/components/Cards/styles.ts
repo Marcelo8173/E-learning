@@ -8,7 +8,7 @@ export const Container = styled.section`
     padding: 25px;
     align-items: center;
     flex: 1;
-    
+    overflow: auto;
     img{
         margin-bottom: 24px;
         max-width: 200px;
