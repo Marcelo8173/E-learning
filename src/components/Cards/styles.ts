@@ -14,6 +14,7 @@ export const Container = styled.section`
         max-width: 200px;
         height: auto;
         margin-right: 30px;
+        border-radius: 25px;
     }
     
     div{
