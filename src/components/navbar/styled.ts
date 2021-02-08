@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 
 interface IProps{
     selected: boolean;
@@ -26,8 +26,11 @@ export const Button = styled.button<IProps>`
     border-right: 1px solid transparent;;
     border-bottom: 1px solid transparent;;
     margin-right: 16px;
+    transition: all 0.4s;
     svg{
         margin-right: 5px;
     }
-    
+    &:hover{
+        opacity: 0.8;
+    }
 `;

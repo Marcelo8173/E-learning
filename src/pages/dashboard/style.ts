@@ -6,11 +6,9 @@ export const Container = styled.div`
         justify-items: center;
     }
     .grid{
-        /* display: grid;
-        grid-template-columns: auto auto auto auto auto; */
         width: 100%;
         a{
-            text-decoration: none;
+            text-decoration: none;    
         }
     }
 `;
