@@ -1,28 +1,32 @@
 import styled from 'styled-components';
 
 export const Container = styled.section`
+    display: flex;
     background: #FFFFFF;
     border-radius: 16px;
-    justify-content:space-between;
-    margin: 16px;
-    padding: 30px;
-    /* width: 100%; */
+    margin: 22px 100px;
+    padding: 25px;
+    align-items: center;
     flex: 1;
+    
+    img{
+        margin-bottom: 24px;
+        max-width: 200px;
+        height: auto;
+        margin-right: 30px;
+    }
+    
     div{
-        display: flex;
-        img{
-            margin-bottom: 24px;
-            max-width: 200px;
-            height: auto
-        }
         p{
             font-family: 'Roboto';
             color: #6C6C80;
+            font-size: 25px;
             margin-bottom: 4px;
         }
         span{
             font-family: 'Roboto';
             color: #C4C4D1;
+            font-size: 18px;
         }
     }
 `;

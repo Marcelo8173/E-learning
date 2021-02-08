@@ -9,9 +9,9 @@ interface ICards{
 const Cards: React.FC<ICards> = ({name,image}) => {
     return(
         <Container>  
+            <img src={image} alt=""/>
             <div>
-                <img src={image} alt=""/>
-                    <p>{name}</p>
+                <p>{name}</p>
                 <span>16 aulas</span>
             </div>
         </Container>
