@@ -13,7 +13,7 @@ export const Container = styled.div`
             border: 1px solid transparent;
             /* text-decoration: none;     */
             &:hover{
-                opacity: 0.5;
+                opacity: 0.9;
             }
         }
     }

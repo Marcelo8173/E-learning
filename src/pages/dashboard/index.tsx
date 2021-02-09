@@ -26,15 +26,20 @@ const Dashboard: React.FC = () => {
     const { tabSelected } = useTabs();
     const history = useHistory();
     const [courses, setCourses] = useState<ICousrses>();
+    const [search, setSearch] = useState('');
     const [load, setLoad] = useState(false);
 
     useEffect(() => {
         tabSelected.id === 1 &&
-            api.get(`/courses`).then(response => {
+            api.get(`/courses`, {
+                params: {
+                    search: search 
+                }
+            }).then(response => {
                 setCourses(response.data);
                 setLoad(true);
         })
-    },[tabSelected]);
+    },[tabSelected,search]);
 
     const handleToCoursePage = useCallback((id:string | undefined) => {
         history.push(`/courses/${id}`)
@@ -47,8 +52,10 @@ const Dashboard: React.FC = () => {
                 <NavBar />
                 <InputContainer>
                     <div>
-                        <AiOutlineSearch color="#C4C4D1" size={20}/>
-                        <input placeholder="Busque um curso" type="text"/>    
+                        <AiOutlineSearch color="#C4C4D1" size={20} />
+                        <form  action="">
+                            <input onChange={e => setSearch(e.target.value)} placeholder="Busque um curso" type="text"/>    
+                        </form>
                     </div>
                 </InputContainer>
             </div>
