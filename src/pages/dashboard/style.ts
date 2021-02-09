@@ -7,8 +7,14 @@ export const Container = styled.div`
     }
     .grid{
         width: 100%;
-        a{
-            text-decoration: none;    
+        display: flex;
+        flex-direction: column;
+        button{
+            border: 1px solid transparent;
+            /* text-decoration: none;     */
+            &:hover{
+                opacity: 0.5;
+            }
         }
     }
 `;

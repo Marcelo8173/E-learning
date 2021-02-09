@@ -13,7 +13,7 @@ const appearFromTop = keyframes`
 
 export const Container = styled.div`
     background: #F0EDF5;
-    height: 100vh;
+    height: 100%;
     overflow: auto;
     margin-top: 32px;
     padding-top: 27px;
