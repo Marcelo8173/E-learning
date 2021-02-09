@@ -1,9 +1,10 @@
 import React, { useEffect, useState, Fragment, useCallback } from'react';
 import Header from '../../components/header';
+import { VscLoading } from 'react-icons/vsc';
 import NavBar from '../../components/navbar';
 import {AiOutlineSearch} from 'react-icons/ai';
 import Background from '../../components/Background';
-import { Container, InputContainer, TitleContainer } from './style';
+import { Container, InputContainer, TitleContainer,LoadContainer } from './style';
 import Cards from '../../components/Cards';
 import api from '../../services/api';
 import { useTabs } from '../../hooks/tabsContext';
@@ -24,13 +25,14 @@ const Dashboard: React.FC = () => {
 
     const { tabSelected } = useTabs();
     const history = useHistory();
-    const [courses,setCourses] = useState<ICousrses>();
+    const [courses, setCourses] = useState<ICousrses>();
+    const [load, setLoad] = useState(false);
 
     useEffect(() => {
         tabSelected.id === 1 &&
             api.get(`/courses`).then(response => {
-                console.log(response)
-            setCourses(response.data);
+                setCourses(response.data);
+                setLoad(true);
         })
     },[tabSelected]);
 
@@ -50,7 +52,14 @@ const Dashboard: React.FC = () => {
                     </div>
                 </InputContainer>
             </div>
-            <main>
+            {!load ?
+                <>
+                    <LoadContainer>
+                        <VscLoading color="#FFFF" size={60}/>
+                    </LoadContainer>
+                </>
+                :
+                <main>
                 <Background>
                     <TitleContainer>
                         <h2>Categorias</h2>
@@ -76,6 +85,7 @@ const Dashboard: React.FC = () => {
                     }
                 </Background>
             </main>
+            }
         </Container>
     )
 }

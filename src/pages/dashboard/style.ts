@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 
 export const Container = styled.div`
     .Nav{
@@ -61,4 +61,21 @@ export const TitleContainer = styled.div`
         color: #A0A0B2;
         font-size: 17px;
     }
+`;
+
+const rotation = keyframes`
+    from {
+		-webkit-transform: rotate(0deg);
+	}
+	to {
+		-webkit-transform: rotate(359deg);
+	}
+`;
+
+export const LoadContainer = styled.div`
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 150px;
+    animation: ${rotation} 4s infinite;
 `;
