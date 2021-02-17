@@ -18,6 +18,10 @@ export const Container = styled.section`
     }
     
     div{
+        display: flex;
+        flex-direction: column;
+        /* justify-content: flex-start; */
+        align-items: start;
         p{
             font-family: 'Roboto';
             color: #6C6C80;
