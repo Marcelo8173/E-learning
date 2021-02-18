@@ -13,6 +13,7 @@ import { useHistory } from 'react-router-dom';
 export interface ICouseData{
     id?: string | undefined;
     name: string;
+    lessonQtd: string;
     image: string;    
 }
 
@@ -80,6 +81,7 @@ const Dashboard: React.FC = () => {
                                         <Cards
                                             name={item.name}
                                             image={item.image}
+                                            lessonQtd={item.lessonQtd}
                                         />
                                     </button>
                                 </Fragment>
