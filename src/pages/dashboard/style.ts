@@ -51,7 +51,7 @@ export const TitleContainer = styled.div`
     display: flex;
     justify-content: space-between;
     justify-items: center;
-    margin: 0px 24px;
+    margin: 0px 24px 24px 24px;
 
     h2{
         color: #3D3D4C;
