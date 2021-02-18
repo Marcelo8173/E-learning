@@ -1,5 +1,6 @@
 import React from 'react';
-import { Container,ContentButton,SectionImg } from './styles';
+import { FiClock } from 'react-icons/fi';
+import { Container,ContentButton,SectionImg,Content } from './styles';
 
 const InternalCard = () => {
     return (
@@ -10,6 +11,12 @@ const InternalCard = () => {
                 </SectionImg>
                 <div>
                     <h1>Titulo da materia</h1>
+                    <Content>
+                        <p>Aula 02</p>
+                        <span>
+                            <FiClock />
+                            5mim</span>
+                    </Content>
                 </div>
             </ContentButton>
         </Container>
