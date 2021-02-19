@@ -8,6 +8,7 @@ export const Container = styled.div`
         font-family: 'Rubik';
         font-weight: 400;
         font-size: 22px;
+        text-align: initial;
         line-height: 20px;
         color: #6C6C80;
     }
@@ -41,6 +42,8 @@ export const SectionImg = styled.div`
 
 export const Content = styled.div`
     display: flex;
+    align-items:center;
+    justify-content: start;
     margin-top: 16px;
     color: #A3A3AD;
     font-weight: 500;
