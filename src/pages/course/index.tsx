@@ -5,7 +5,8 @@ import InternalCards from '../../components/InternalCard';
 import api from '../../services/api';
 import Header from '../../components/header';
 import Background from '../../components/Background';
-import { TitleContainer } from '../dashboard/style';
+import { TitleContainer, LoadContainer } from '../dashboard/style';
+import { VscLoading } from 'react-icons/vsc';
 
 interface IParams{
     id: string;
@@ -28,6 +29,8 @@ const Courses: React.FC = () => {
 
     const [course, setCourse] = useState<Icourse>();
     const [lesson, setLesson] = useState<ILesson[]>([]);
+    const [load, setLoad] = useState(false);
+
 
     useEffect(() => {
         api.get(`/courses/${id}`).then(response => {
@@ -39,30 +42,39 @@ const Courses: React.FC = () => {
         });
         api.get(`/lesson/${id}`).then(response => {
             setLesson(response.data)
-        })
+        });
+        setLoad(true);
     }, [id]);
 
     return (
         <Container>
             <Header />
-            <main>
-                <Background>
-                    <TitleContainer>
-                        <h2>{course?.name}</h2>
-                        <span>{course?.lessonsqtd} cursos</span>
-                    </TitleContainer>
-                    {lesson.map(item => (
-                        <Fragment key={item.id}>
-                            <InternalCards
-                                description={item.description}
-                                duration={item.duration}
-                                name={item.name}
-                                id={item.id}
-                            />
-                        </Fragment>
-                    ))}
-                </Background>
-            </main>
+            {!load ?
+                <>
+                    <LoadContainer>
+                        <VscLoading color="#FFFF" size={60}/>
+                    </LoadContainer>
+                </>
+            :
+                <main>
+                    <Background>
+                        <TitleContainer>
+                            <h2>{course?.name}</h2>
+                            <span>{course?.lessonsqtd} cursos</span>
+                        </TitleContainer>
+                        {lesson.map(item => (
+                            <Fragment key={item.id}>
+                                <InternalCards
+                                    description={item.description}
+                                    duration={item.duration}
+                                    name={item.name}
+                                    id={item.id}
+                                />
+                            </Fragment>
+                        ))}
+                    </Background>
+                </main>
+            }
         </Container>
     );
 }

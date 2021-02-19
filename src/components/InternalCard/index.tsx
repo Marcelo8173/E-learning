@@ -4,7 +4,6 @@ import { Container,ContentButton,SectionImg,Content } from './styles';
 import { ILesson } from '../../pages/course';
 
 const InternalCard: React.FC<ILesson> = ({ name, description, duration, id }) => {
-    console.log('aq')
     return (
         <Container>
             <ContentButton>
