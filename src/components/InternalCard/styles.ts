@@ -21,18 +21,20 @@ export const ContentButton = styled.button`
     background: #FFFFFF;
     border-radius: 16px;
     align-items: center;
-    padding: 12px;
+    padding: 17px;
     /* justify-content: center; */
     width: 80%;
 `;
 
 export const SectionImg = styled.div`
     /* position: absolute; */
-    width: 68px;
+    position: relative;
+    left: -40px;
+    width: 75px;
     overflow: hidden;
-    border-radius: 16px;
     img{
-        width: 68px;
+        border-radius: 16px;
+        width: 75px;
         height: auto;
     }
 `;
