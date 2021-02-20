@@ -32,17 +32,19 @@ const Courses: React.FC = () => {
     const [load, setLoad] = useState(false);
 
 
-    useEffect(() => {
-        api.get(`/courses/${id}`).then(response => {
+    useEffect(() => { 
+        Promise.all([
+            api.get(`/courses/${id}`),
+            api.get(`/lesson/${id}`)
+        ]).then(values => {
+            console.log(values[0].data)
             const data = {
-                lessonsqtd: response.data.count[0].lessonsqtd,
-                name: response.data.course[0].name
+                lessonsqtd: values[0]?.data.count[0].lessonsqtd,
+                name: values[0]?.data.course[0].name
             }
             setCourse(data);
-        });
-        api.get(`/lesson/${id}`).then(response => {
-            setLesson(response.data)
-        });
+            setLesson(values[1].data)
+        })
         setLoad(true);
     }, [id]);
 
