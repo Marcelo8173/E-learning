@@ -37,7 +37,6 @@ const Courses: React.FC = () => {
             api.get(`/courses/${id}`),
             api.get(`/lesson/${id}`)
         ]).then(values => {
-            console.log(values[0].data)
             const data = {
                 lessonsqtd: values[0]?.data.count[0].lessonsqtd,
                 name: values[0]?.data.course[0].name

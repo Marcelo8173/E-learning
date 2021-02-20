@@ -25,6 +25,10 @@ export const ContentButton = styled.button`
     padding: 17px;
     /* justify-content: center; */
     width: 80%;
+    transition: all 0.2s;
+    &:hover{
+        opacity: 0.8;
+    }
 `;
 
 export const SectionImg = styled.div`
